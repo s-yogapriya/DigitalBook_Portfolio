@@ -1,0 +1,83 @@
+:root {
+  /* Paper & Background */
+  --paper-warm: #FAF7F2;
+  --paper-cream: #F5F0E8;
+  --paper-ivory: #FEFCF8;
+  --paper-light: #FDFCF9;
+  --paper-shadow: rgba(0, 0, 0, 0.06);
+
+  /* Watercolor Accent Palette */
+  --accent-royal-blue: #3A5BA0;
+  --accent-emerald: #2E8B57;
+  --accent-orange: #E8783A;
+  --accent-crimson: #C0392B;
+  --accent-purple: #7D3C98;
+  --accent-yellow: #F0C040;
+  --accent-turquoise: #1ABC9C;
+  --accent-pink: #E06B8A;
+
+  /* Watercolor softer variants */
+  --wc-blue-soft: rgba(58, 91, 160, 0.12);
+  --wc-emerald-soft: rgba(46, 139, 87, 0.12);
+  --wc-orange-soft: rgba(232, 120, 58, 0.12);
+  --wc-crimson-soft: rgba(192, 57, 43, 0.10);
+  --wc-purple-soft: rgba(125, 60, 152, 0.12);
+  --wc-yellow-soft: rgba(240, 192, 64, 0.14);
+  --wc-turquoise-soft: rgba(26, 188, 156, 0.12);
+  --wc-pink-soft: rgba(224, 107, 138, 0.12);
+
+  /* Gold / Emboss */
+  --gold-primary: #C9A84C;
+  --gold-light: #E8D48B;
+  --gold-dark: #9A7B2F;
+  --gold-shimmer: linear-gradient(135deg, #C9A84C 0%, #E8D48B 40%, #C9A84C 60%, #9A7B2F 100%);
+
+  /* Text */
+  --text-primary: #2C2C2C;
+  --text-secondary: #5A5A5A;
+  --text-muted: #8A8A8A;
+  --text-light: #B0B0B0;
+  --text-on-dark: #FAF7F2;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+  --font-display: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-accent: 'Caveat', cursive;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* Book Dimensions */
+  --book-width: 1100px;
+  --book-height: 720px;
+  --page-width: 550px;
+  --page-height: 720px;
+  --spine-width: 20px;
+
+  /* Shadows */
+  --shadow-book: 0 20px 60px rgba(0,0,0,0.3), 0 5px 20px rgba(0,0,0,0.15);
+  --shadow-page: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-card: 0 4px 20px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 8px 30px rgba(0,0,0,0.10);
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+
+  /* Transitions */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 200ms var(--ease-smooth);
+  --transition-normal: 400ms var(--ease-smooth);
+  --transition-slow: 700ms var(--ease-out-expo);
+}

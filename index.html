@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Artoriya Studio — Professional Drawing Artist Portfolio</title>
+  <meta name="description" content="Artoriya Studio - Premium digital portfolio book for professional drawing artist and art academy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/book.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>.loading-screen{display:flex}</style>
+</head>
+<body>
+  <div class="loading-screen">
+    <div class="loading-logo">ARTORIYA STUDIO</div>
+    <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+    <div class="loading-text">Preparing the canvas...</div>
+  </div>
+  <div class="book-wrapper">
+    <button class="nav-arrow nav-arrow--prev hidden" id="nav-prev" aria-label="Previous page"></button>
+    <button class="nav-arrow nav-arrow--next" id="nav-next" aria-label="Next page"></button>
+    <div class="nav-hint"><span>Drag or click to flip</span></div>
+    <div class="book-container" id="book-container">
+      <div class="book-spine"></div>
+      <div id="flipbook">
+        <!-- PAGE 1: LUXURY COVER -->
+        <div class="hard" data-density="hard">
+          <div class="book-cover cover-luxury">
+            <div class="cover-paper-texture"></div>
+
+            <!-- Watercolor splashes at all 4 borders -->
+            <div class="cover-wc-splashes">
+              <svg class="wc-splash wc-splash-tl" viewBox="0 0 200 200" fill="none">
+                <path d="M20 80 Q40 20 100 30 Q160 40 150 100 Q140 160 80 150 Q20 140 20 80Z" fill="#3A5BA0" opacity="0.14"/>
+                <path d="M40 60 Q60 10 110 25 Q155 35 145 85 Q135 135 75 125 Q30 115 40 60Z" fill="#5B9BD5" opacity="0.08"/>
+                <path d="M55 45 Q75 5 120 18 Q158 28 148 78 Q138 128 78 118 Q38 108 55 45Z" fill="#E8783A" opacity="0.06"/>
+              </svg>
+              <svg class="wc-splash wc-splash-tr" viewBox="0 0 200 200" fill="none">
+                <path d="M180 70 Q160 15 100 25 Q40 35 50 95 Q60 155 120 145 Q180 135 180 70Z" fill="#C0392B" opacity="0.12"/>
+                <path d="M160 55 Q140 10 90 20 Q45 30 55 80 Q65 130 125 120 Q170 110 160 55Z" fill="#2E8B57" opacity="0.07"/>
+                <path d="M150 40 Q130 5 85 15 Q42 25 52 72 Q62 118 118 110 Q160 102 150 40Z" fill="#E74C3C" opacity="0.05"/>
+              </svg>
+              <svg class="wc-splash wc-splash-bl" viewBox="0 0 200 200" fill="none">
+                <path d="M25 130 Q45 185 105 175 Q165 165 155 105 Q145 45 85 55 Q25 65 25 130Z" fill="#2E8B57" opacity="0.12"/>
+                <path d="M45 145 Q65 190 115 180 Q160 170 150 120 Q140 70 90 80 Q35 90 45 145Z" fill="#7D3C98" opacity="0.06"/>
+                <path d="M55 155 Q75 195 125 188 Q162 178 152 128 Q142 78 95 88 Q42 98 55 155Z" fill="#58D68D" opacity="0.05"/>
+              </svg>
+              <svg class="wc-splash wc-splash-br" viewBox="0 0 200 200" fill="none">
+                <path d="M175 130 Q155 185 95 175 Q35 165 45 105 Q55 45 115 55 Q175 65 175 130Z" fill="#F0C040" opacity="0.13"/>
+                <path d="M155 145 Q135 190 85 180 Q40 170 50 120 Q60 70 110 80 Q165 90 155 145Z" fill="#1ABC9C" opacity="0.06"/>
+                <path d="M145 155 Q125 195 80 185 Q38 175 48 125 Q58 78 105 88 Q155 98 145 155Z" fill="#F4D03F" opacity="0.05"/>
+              </svg>
+            </div>
+
+            <!-- Ink drops / color powder -->
+            <div class="cover-ink-drops">
+              <div class="ink-drop" style="top:8%;left:12%;background:#3A5BA0;width:5px;height:5px"></div>
+              <div class="ink-drop" style="top:15%;right:18%;background:#E8783A;width:4px;height:4px"></div>
+              <div class="ink-drop" style="top:25%;left:8%;background:#2E8B57;width:6px;height:6px"></div>
+              <div class="ink-drop" style="top:35%;right:10%;background:#C0392B;width:3px;height:3px"></div>
+              <div class="ink-drop" style="bottom:30%;left:15%;background:#7D3C98;width:5px;height:5px"></div>
+              <div class="ink-drop" style="bottom:20%;right:12%;background:#F0C040;width:4px;height:4px"></div>
+              <div class="ink-drop" style="bottom:12%;left:22%;background:#1ABC9C;width:3px;height:3px"></div>
+              <div class="ink-drop" style="top:55%;left:6%;background:#E67E22;width:4px;height:4px"></div>
+              <div class="ink-drop" style="top:65%;right:8%;background:#2980B9;width:5px;height:5px"></div>
+              <div class="ink-drop" style="bottom:8%;right:25%;background:#E74C3C;width:3px;height:3px"></div>
+              <div class="ink-drop" style="top:45%;left:18%;background:#27AE60;width:3px;height:3px"></div>
+              <div class="ink-drop" style="bottom:35%;right:20%;background:#8E44AD;width:4px;height:4px"></div>
+            </div>
+
+            <!-- Sparkles -->
+            <div class="cover-sparkles">
+              <svg class="sparkle sc-1" viewBox="0 0 20 20"><path d="M10 0L12 8L20 10L12 12L10 20L8 12L0 10L8 8Z" fill="#F0C040" opacity="0.6"/></svg>
+              <svg class="sparkle sc-2" viewBox="0 0 20 20"><path d="M10 0L12 8L20 10L12 12L10 20L8 12L0 10L8 8Z" fill="#E8783A" opacity="0.5"/></svg>
+              <svg class="sparkle sc-3" viewBox="0 0 20 20"><path d="M10 0L12 8L20 10L12 12L10 20L8 12L0 10L8 8Z" fill="#3A5BA0" opacity="0.45"/></svg>
+              <svg class="sparkle sc-4" viewBox="0 0 14 14"><path d="M7 0L8.5 5.5L14 7L8.5 8.5L7 14L5.5 8.5L0 7L5.5 5.5Z" fill="#2E8B57" opacity="0.5"/></svg>
+              <svg class="sparkle sc-5" viewBox="0 0 14 14"><path d="M7 0L8.5 5.5L14 7L8.5 8.5L7 14L5.5 8.5L0 7L5.5 5.5Z" fill="#7D3C98" opacity="0.4"/></svg>
+              <svg class="sparkle sc-6" viewBox="0 0 10 10"><path d="M5 0L6 4L10 5L6 6L5 10L4 6L0 5L4 4Z" fill="#C0392B" opacity="0.35"/></svg>
+              <svg class="sparkle sc-7" viewBox="0 0 10 10"><path d="M5 0L6 4L10 5L6 6L5 10L4 6L0 5L4 4Z" fill="#F0C040" opacity="0.4"/></svg>
+            </div>
+
+            <!-- Large paint palette behind title -->
+            <div class="cover-palette-illustration">
+              <svg viewBox="0 0 160 140" fill="none">
+                <path d="M80 10 Q140 10 150 60 Q160 110 100 130 Q60 140 30 120 Q10 100 10 60 Q10 20 80 10Z" fill="#F5F0E8" stroke="#C9A84C" stroke-width="1" opacity="0.3"/>
+                <circle cx="50" cy="45" r="10" fill="#3A5BA0" opacity="0.2"/>
+                <circle cx="80" cy="35" r="9" fill="#E8783A" opacity="0.18"/>
+                <circle cx="110" cy="50" r="10" fill="#2E8B57" opacity="0.17"/>
+                <circle cx="120" cy="85" r="8" fill="#C0392B" opacity="0.17"/>
+                <circle cx="95" cy="110" r="9" fill="#7D3C98" opacity="0.15"/>
+                <circle cx="55" cy="100" r="8" fill="#F0C040" opacity="0.17"/>
+                <circle cx="35" cy="75" r="7" fill="#1ABC9C" opacity="0.15"/>
+                <ellipse cx="70" cy="75" rx="12" ry="10" fill="#EDE5D8" stroke="#C9A84C" stroke-width="0.8" opacity="0.25"/>
+              </svg>
+            </div>
+
+            <!-- Paint brushes -->
+            <div class="cover-brush brush-cover-1">
+              <svg viewBox="0 0 26 180" fill="none">
+                <rect x="10" y="70" width="6" height="100" rx="3" fill="#8B6914" opacity="0.18"/>
+                <rect x="7" y="62" width="12" height="14" rx="2" fill="#C9A84C" opacity="0.15"/>
+                <ellipse cx="13" cy="50" rx="10" ry="16" fill="#3A5BA0" opacity="0.1"/>
+              </svg>
+            </div>
+            <div class="cover-brush brush-cover-2">
+              <svg viewBox="0 0 22 160" fill="none">
+                <rect x="8" y="60" width="5" height="90" rx="2.5" fill="#6B3A0A" opacity="0.15"/>
+                <rect x="5" y="53" width="11" height="12" rx="2" fill="#C9A84C" opacity="0.12"/>
+                <ellipse cx="10.5" cy="42" rx="9" ry="14" fill="#E8783A" opacity="0.09"/>
+              </svg>
+            </div>
+            <div class="cover-brush brush-cover-3">
+              <svg viewBox="0 0 20 140" fill="none">
+                <rect x="7" y="55" width="5" height="80" rx="2.5" fill="#5C3D0E" opacity="0.12"/>
+                <rect x="4.5" y="48" width="10" height="11" rx="2" fill="#C9A84C" opacity="0.1"/>
+                <ellipse cx="9.5" cy="38" rx="8" ry="12" fill="#2E8B57" opacity="0.08"/>
+              </svg>
+            </div>
+
+            <!-- Pencil + charcoal near bottom -->
+            <div class="cover-brush brush-pencil">
+              <svg viewBox="0 0 14 120" fill="none">
+                <rect x="4" y="20" width="6" height="90" rx="1" fill="#E8C840" opacity="0.15"/>
+                <polygon points="7,5 4,20 10,20" fill="#333" opacity="0.1"/>
+                <rect x="4" y="20" width="6" height="5" rx="0.5" fill="#F5C6A0" opacity="0.12"/>
+              </svg>
+            </div>
+            <div class="cover-brush brush-charcoal">
+              <svg viewBox="0 0 10 90" fill="none">
+                <rect x="2" y="15" width="6" height="65" rx="1.5" fill="#2C2C2C" opacity="0.1"/>
+                <rect x="3" y="10" width="4" height="10" rx="1" fill="#1a1a1a" opacity="0.08"/>
+              </svg>
+            </div>
+
+            <!-- Paint tubes bottom corners -->
+            <div class="cover-brush tube-left">
+              <svg viewBox="0 0 40 80" fill="none">
+                <rect x="8" y="25" width="24" height="45" rx="4" fill="#3A5BA0" opacity="0.12"/>
+                <rect x="14" y="15" width="12" height="14" rx="2" fill="#C9A84C" opacity="0.1"/>
+                <rect x="16" y="8" width="8" height="10" rx="1.5" fill="#888" opacity="0.08"/>
+                <rect x="12" y="35" width="16" height="8" rx="1" fill="#fff" opacity="0.08"/>
+              </svg>
+            </div>
+            <div class="cover-brush tube-right">
+              <svg viewBox="0 0 40 80" fill="none">
+                <rect x="8" y="25" width="24" height="45" rx="4" fill="#E8783A" opacity="0.1"/>
+                <rect x="14" y="15" width="12" height="14" rx="2" fill="#C9A84C" opacity="0.09"/>
+                <rect x="16" y="8" width="8" height="10" rx="1.5" fill="#888" opacity="0.07"/>
+                <rect x="12" y="35" width="16" height="8" rx="1" fill="#fff" opacity="0.07"/>
+              </svg>
+            </div>
+
+            <!-- Watercolor flowers -->
+            <div class="cover-flowers">
+              <svg class="flower flower-tl" viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="22" r="8" fill="#E8783A" opacity="0.12"/>
+                <circle cx="22" cy="30" r="8" fill="#C0392B" opacity="0.1"/>
+                <circle cx="38" cy="30" r="8" fill="#F0C040" opacity="0.1"/>
+                <circle cx="30" cy="38" r="8" fill="#E8783A" opacity="0.08"/>
+                <circle cx="30" cy="30" r="4" fill="#F0C040" opacity="0.15"/>
+              </svg>
+              <svg class="flower flower-tr" viewBox="0 0 50 50" fill="none">
+                <circle cx="25" cy="18" r="7" fill="#3A5BA0" opacity="0.1"/>
+                <circle cx="18" cy="25" r="7" fill="#5B9BD5" opacity="0.08"/>
+                <circle cx="32" cy="25" r="7" fill="#7D3C98" opacity="0.08"/>
+                <circle cx="25" cy="32" r="7" fill="#3A5BA0" opacity="0.06"/>
+                <circle cx="25" cy="25" r="3.5" fill="#F0C040" opacity="0.12"/>
+              </svg>
+              <svg class="flower flower-bl" viewBox="0 0 55 55" fill="none">
+                <circle cx="27" cy="20" r="7.5" fill="#2E8B57" opacity="0.1"/>
+                <circle cx="20" cy="27" r="7.5" fill="#58D68D" opacity="0.08"/>
+                <circle cx="34" cy="27" r="7.5" fill="#1ABC9C" opacity="0.08"/>
+                <circle cx="27" cy="34" r="7.5" fill="#2E8B57" opacity="0.06"/>
+                <circle cx="27" cy="27" r="3.5" fill="#F0C040" opacity="0.12"/>
+              </svg>
+              <svg class="flower flower-br" viewBox="0 0 45 45" fill="none">
+                <circle cx="22" cy="16" r="6.5" fill="#7D3C98" opacity="0.1"/>
+                <circle cx="16" cy="22" r="6.5" fill="#C0392B" opacity="0.08"/>
+                <circle cx="28" cy="22" r="6.5" fill="#E8783A" opacity="0.08"/>
+                <circle cx="22" cy="28" r="6.5" fill="#7D3C98" opacity="0.06"/>
+                <circle cx="22" cy="22" r="3" fill="#F0C040" opacity="0.12"/>
+              </svg>
+            </div>
+
+            <!-- Gold corners -->
+            <div class="cover-corner cover-corner--tl"></div>
+            <div class="cover-corner cover-corner--tr"></div>
+            <div class="cover-corner cover-corner--bl"></div>
+            <div class="cover-corner cover-corner--br"></div>
+
+            <!-- Main cover content -->
+            <div class="cover-page">
+              <div class="cover-logo-area">
+                <div class="cover-palette-icon">
+                  <svg viewBox="0 0 80 80" fill="none">
+                    <circle cx="40" cy="40" r="36" fill="#F5F0E8" stroke="#C9A84C" stroke-width="1.5"/>
+                    <circle cx="28" cy="28" r="5" fill="#3A5BA0" opacity="0.8"/>
+                    <circle cx="52" cy="28" r="5" fill="#E8783A" opacity="0.8"/>
+                    <circle cx="28" cy="50" r="5" fill="#2E8B57" opacity="0.8"/>
+                    <circle cx="52" cy="50" r="5" fill="#C0392B" opacity="0.8"/>
+                    <circle cx="40" cy="40" r="4" fill="#7D3C98" opacity="0.8"/>
+                    <circle cx="40" cy="25" r="3" fill="#F0C040" opacity="0.7"/>
+                    <circle cx="40" cy="55" r="3" fill="#1ABC9C" opacity="0.7"/>
+                  </svg>
+                </div>
+              </div>
+              <h1 class="cover-title">ARTORIYA STUDIO</h1>
+              <div class="cover-gold-foil-divider"></div>
+              <p class="cover-subtitle">Professional Artist Drawing Portfolio</p>
+              <div class="cover-icons-row">
+                <span class="cover-art-icon">&#127912;</span>
+                <span class="cover-art-icon">&#128396;</span>
+                <span class="cover-art-icon">&#9998;</span>
+                <span class="cover-art-icon">&#128444;</span>
+              </div>
+              <p class="cover-tagline">Draw <span>&bull;</span> Paint <span>&bull;</span> Create</p>
+              <div class="cover-since">Since 2024</div>
+            </div>
+          </div>
+        </div>
+        <!-- PAGE 2: ABOUT (LEFT) -->
+        <div>
+          <div class="page-inner page-left">
+            <div class="deco-watercolor-edge deco-watercolor-edge--top-right"></div>
+            <div class="deco-brush-stroke deco-brush-stroke--1"></div>
+            <div class="deco-float-circle deco-float-circle--sm"></div>
+            <div class="about-page">
+              <div class="about-header">
+                <p class="section-label">Our Story</p>
+                <h2>About Artoriya Studio</h2>
+                <div class="gold-divider gold-divider--left"></div>
+              </div>
+              <div class="about-content">
+                <div class="about-illustration">
+                  <div class="wc-accent"></div>
+                  <div class="sketch-line sketch-line--1"></div>
+                  <div class="sketch-line sketch-line--2"></div>
+                  <div class="sketch-line sketch-line--3"></div>
+                  <div class="artist-sketch">
+                    <div class="sketch-frame">
+                      <div class="sketch-placeholder">
+                        <div class="sketch-icon">&#127912;</div>
+                        <p>Artist at Work</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-story">
+                  <h3>A Creative Learning Space</h3>
+                  <p>Artoriya Studio is a creative learning space dedicated to inspiring artists of all ages. Our mission is to transform imagination into beautiful works of art through structured learning, creativity, and personal expression.</p>
+                  <p>We provide professional guidance in drawing, painting, sketching, and creative exploration. Students learn through practical experience in a welcoming environment where every artist is encouraged to grow.</p>
+                </div>
+              </div>
+              <div class="about-values" id="about-values"></div>
+            </div>
+            <span class="page-number">02</span>
+          </div>
+        </div>
+
+        <!-- PAGE 3: FINE ARTS JOURNEY (RIGHT) -->
+        <div>
+          <div class="page-inner page-right">
+            <div class="deco-watercolor-edge deco-watercolor-edge--bottom-left"></div>
+            <div class="fine-arts-page">
+              <div class="fine-arts-header">
+                <p class="section-label">Our Journey</p>
+                <h2>The Art of Fine Arts</h2>
+                <div class="gold-divider"></div>
+              </div>
+              <div class="fine-arts-top">
+                <div class="fine-arts-intro">
+                  <p>At Artoriya Studio, every brushstroke is a step in a beautiful journey. We believe fine arts education goes beyond technique &mdash; it cultivates patience, perspective, and a deep appreciation for beauty in everyday life.</p>
+                </div>
+                <div class="art-experience-cards">
+                  <div class="exp-card exp-card-blue">
+                    <div class="exp-card-icon">&#9998;</div>
+                    <h4>Pencil Sketching</h4>
+                    <p>From still life to portraits, learn the foundations of light, shadow, and form.</p>
+                  </div>
+                  <div class="exp-card exp-card-orange">
+                    <div class="exp-card-icon">&#127912;</div>
+                    <h4>Color Theory</h4>
+                    <p>Understand how colors interact, blend, and evoke emotion across every medium.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="fine-arts-divider"><div class="paint-stroke-line"></div></div>
+              <div class="fine-arts-bottom">
+                <h3 class="demo-title">Demo Art Experiences</h3>
+                <div class="demo-grid">
+                  <div class="demo-item">
+                    <div class="demo-color-dot" style="background:var(--accent-royal-blue)"></div>
+                    <div class="demo-info"><h5>Live Painting Demos</h5><p>Watch our mentors create artwork live, sharing techniques and creative decision-making in real time.</p></div>
+                  </div>
+                  <div class="demo-item">
+                    <div class="demo-color-dot" style="background:var(--accent-emerald)"></div>
+                    <div class="demo-info"><h5>Workshop Sessions</h5><p>Hands-on group workshops where students explore new materials, styles, and artistic approaches together.</p></div>
+                  </div>
+                  <div class="demo-item">
+                    <div class="demo-color-dot" style="background:var(--accent-crimson)"></div>
+                    <div class="demo-info"><h5>Student Exhibitions</h5><p>Every season, our students showcase their best work in curated exhibitions open to family and friends.</p></div>
+                  </div>
+                  <div class="demo-item">
+                    <div class="demo-color-dot" style="background:var(--accent-purple)"></div>
+                    <div class="demo-info"><h5>Plein Air Painting</h5><p>Outdoor painting sessions in parks and heritage sites, capturing nature's beauty on canvas.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="page-number">03</span>
+          </div>
+        </div>
+
+        <!-- PAGE 4: COURSES (LEFT) -->
+        <div>
+          <div class="page-inner page-left">
+            <div class="deco-watercolor-edge deco-watercolor-edge--top-right"></div>
+            <div class="deco-brush-stroke deco-brush-stroke--2"></div>
+            <div class="courses-page">
+              <div class="courses-header">
+                <p class="section-label">What We Teach</p>
+                <h2>Explore Our Creative Courses</h2>
+                <div class="gold-divider"></div>
+              </div>
+              <div class="courses-grid" id="courses-grid"></div>
+            </div>
+            <span class="page-number">04</span>
+          </div>
+        </div>
+
+        <!-- PAGE 5: BATCHES & BENEFITS (RIGHT) -->
+        <div>
+          <div class="page-inner page-right">
+            <div class="deco-watercolor-edge deco-watercolor-edge--bottom-left"></div>
+            <div class="deco-float-circle deco-float-circle--md"></div>
+            <div class="batches-page">
+              <div class="batches-section">
+                <div class="section-title">Flexible Batches</div>
+                <div class="gold-divider"></div>
+                <div class="batch-cards" id="batch-cards"></div>
+              </div>
+              <div class="benefits-section">
+                <div class="section-title">Why Join Us</div>
+                <div class="gold-divider"></div>
+                <div class="benefits-grid" id="benefits-grid"></div>
+              </div>
+            </div>
+            <span class="page-number">05</span>
+          </div>
+        </div>
+
+        <!-- PAGE 6: CONTACT (LEFT) -->
+        <div>
+          <div class="page-inner page-left">
+            <div class="deco-watercolor-edge deco-watercolor-edge--top-right"></div>
+            <div class="deco-brush-stroke deco-brush-stroke--1"></div>
+            <div class="deco-float-circle deco-float-circle--sm"></div>
+            <div class="contact-page">
+              <p class="section-label">Get in Touch</p>
+              <h2>Let's Create Something Beautiful Together</h2>
+              <div class="gold-divider"></div>
+              <p class="tagline">Enroll Today</p>
+              <div class="contact-info">
+                <div class="contact-block">
+                  <div class="contact-icon">&#9743;</div>
+                  <h4>Phone</h4>
+                  <p>9787353358</p>
+                </div>
+                <div class="contact-block">
+                  <div class="contact-icon">&#128205;</div>
+                  <h4>Address</h4>
+                  <p>No.1 Veerappachipuram<br>Sunnambukara Street<br>Palayam Bazaar, Woraiyur<br>Trichy</p>
+                </div>
+              </div>
+              <a href="tel:9787353358" class="cta-button">Enroll Now</a>
+            </div>
+            <span class="page-number">06</span>
+          </div>
+        </div>
+
+        <!-- PAGE 7: BACK COVER (RIGHT) -->
+        <div class="hard" data-density="hard">
+          <div class="book-back-cover">
+            <div class="back-cover-content">
+              <div class="back-logo">ARTORIYA STUDIO</div>
+              <div class="gold-divider"></div>
+              <p>Professional Drawing Artist Portfolio</p>
+              <p>No.1 Veerappachipuram, Sunnambukara Street</p>
+              <p>Palayam Bazaar, Woraiyur, Trichy</p>
+              <div class="back-tagline">Draw &bull; Paint &bull; Create</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
