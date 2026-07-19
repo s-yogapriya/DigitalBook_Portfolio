@@ -125,7 +125,7 @@
 .page-inner {
   width: 100%;
   height: 100%;
-  padding: 3rem 3.5rem;
+  padding: 2.5rem 3rem;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -182,19 +182,19 @@
 
 .page-number {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 1.2rem;
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--text-light);
   letter-spacing: 0.1em;
 }
 
 .page-left .page-number {
-  left: 3.5rem;
+  left: 3rem;
 }
 
 .page-right .page-number {
-  right: 3.5rem;
+  right: 3rem;
 }
 
 /* ===========================
@@ -203,19 +203,20 @@
 
 .nav-hint {
   position: fixed;
-  bottom: 2rem;
+  bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 1rem;
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.35);
   z-index: 50;
   transition: opacity 0.6s var(--ease-smooth);
+  white-space: nowrap;
 }
 
 .nav-hint.hidden {
@@ -228,8 +229,8 @@
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: rgba(255,255,255,0.06);
   backdrop-filter: blur(10px);
@@ -241,9 +242,15 @@
   opacity: 0;
 }
 
-.nav-arrow:hover {
-  background: rgba(255,255,255,0.12);
+.nav-arrow:hover,
+.nav-arrow:focus-visible {
+  background: rgba(255,255,255,0.14);
   transform: translateY(-50%) scale(1.1);
+  outline: none;
+}
+
+.nav-arrow:active {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .book-wrapper:hover .nav-arrow {
@@ -251,11 +258,11 @@
 }
 
 .nav-arrow--prev {
-  left: 20px;
+  left: 16px;
 }
 
 .nav-arrow--next {
-  right: 20px;
+  right: 16px;
 }
 
 .nav-arrow svg {

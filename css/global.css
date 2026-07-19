@@ -20,10 +20,13 @@ body {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 img {
@@ -75,16 +78,78 @@ p {
   pointer-events: none;
 }
 
+.loading-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.loading-palette-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.5rem;
+  animation: loadingFloat 2s ease-in-out infinite;
+}
+
+.loading-palette-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes loadingFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
 .loading-logo {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--gold-primary);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.loading-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
   margin-bottom: 2rem;
 }
 
+.loading-spinner {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 1.5rem;
+}
+
+.spinner-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--paper-cream);
+  border-top-color: var(--gold-primary);
+  animation: loadingSpin 1.2s linear infinite;
+}
+
+.spinner-ring--2 {
+  inset: 4px;
+  border-top-color: var(--accent-orange);
+  animation-duration: 1.8s;
+  animation-direction: reverse;
+}
+
+@keyframes loadingSpin {
+  to { transform: rotate(360deg); }
+}
+
 .loading-bar {
-  width: 200px;
+  width: 180px;
   height: 2px;
   background: var(--paper-cream);
   border-radius: 2px;
@@ -102,10 +167,35 @@ p {
 .loading-text {
   margin-top: 1rem;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-muted);
+}
+
+.loading-dots {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.loading-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold-light);
+  animation: dotPulse 1.4s ease-in-out infinite;
+}
+
+.loading-dot:nth-child(2) { animation-delay: 0.2s; }
+.loading-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dotPulse {
+  0%, 80%, 100% { opacity: 0.2; transform: scale(1); }
+  40% { opacity: 1; transform: scale(1.3); }
 }
 
 /* Paper Texture Overlay (applied to pages) */

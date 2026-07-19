@@ -13,17 +13,19 @@ function getBookDimensions() {
   var vh = window.innerHeight;
   var isMobile = vw <= 768;
   var isTablet = vw <= 1200 && vw > 768;
+  var isSmallPhone = vw <= 360;
 
   var pageWidth, pageHeight;
 
   if (isMobile) {
     // Single page mode: one page fills the screen
-    pageWidth = Math.min(vw - 16, 420);
-    pageHeight = Math.min(vh - 32, 680);
+    var mobilePadding = isSmallPhone ? 8 : 16;
+    pageWidth = Math.min(vw - mobilePadding, isSmallPhone ? 340 : 420);
+    pageHeight = Math.min(vh - (isSmallPhone ? 20 : 32), isSmallPhone ? 580 : 680);
   } else if (isTablet) {
     // Two-page spread but smaller
-    pageWidth = Math.min(Math.floor((vw - 80) / 2), 440);
-    pageHeight = Math.min(vh - 60, 650);
+    pageWidth = Math.min(Math.floor((vw - 60) / 2), 440);
+    pageHeight = Math.min(vh - 50, 650);
   } else {
     // Desktop: full size
     pageWidth = 550;
@@ -31,8 +33,8 @@ function getBookDimensions() {
   }
 
   return {
-    width: pageWidth,
-    height: pageHeight,
+    width: Math.max(pageWidth, 280),
+    height: Math.max(pageHeight, 360),
     isMobile: isMobile
   };
 }

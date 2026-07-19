@@ -13,13 +13,35 @@
   <link rel="stylesheet" href="css/pages.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <style>.loading-screen{display:flex}</style>
+  <style>.loading-screen{display:flex;position:fixed;inset:0;z-index:10000;background:#FAF7F2}</style>
 </head>
 <body>
   <div class="loading-screen">
-    <div class="loading-logo">ARTORIYA STUDIO</div>
-    <div class="loading-bar"><div class="loading-bar-fill"></div></div>
-    <div class="loading-text">Preparing the canvas...</div>
+    <div class="loading-inner">
+      <div class="loading-palette-icon">
+        <svg viewBox="0 0 80 80" fill="none">
+          <circle cx="40" cy="40" r="36" fill="#F5F0E8" stroke="#C9A84C" stroke-width="1.5"/>
+          <circle cx="28" cy="28" r="5" fill="#3A5BA0" opacity="0.8"/>
+          <circle cx="52" cy="28" r="5" fill="#E8783A" opacity="0.8"/>
+          <circle cx="28" cy="50" r="5" fill="#2E8B57" opacity="0.8"/>
+          <circle cx="52" cy="50" r="5" fill="#C0392B" opacity="0.8"/>
+          <circle cx="40" cy="40" r="4" fill="#7D3C98" opacity="0.8"/>
+        </svg>
+      </div>
+      <div class="loading-logo">ARTORIYA STUDIO</div>
+      <div class="loading-subtitle">Professional Artist Studio</div>
+      <div class="loading-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring spinner-ring--2"></div>
+      </div>
+      <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+      <div class="loading-text">Preparing the canvas...</div>
+    </div>
+    <div class="loading-dots">
+      <span class="loading-dot"></span>
+      <span class="loading-dot"></span>
+      <span class="loading-dot"></span>
+    </div>
   </div>
   <div class="book-wrapper">
     <button class="nav-arrow nav-arrow--prev hidden" id="nav-prev" aria-label="Previous page"></button>

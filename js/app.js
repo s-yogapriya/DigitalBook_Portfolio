@@ -16,11 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
     'Preparing the canvas...',
     'Mixing colors...',
     'Arranging the studio...',
+    'Loading artwork...',
     'Opening the book...',
   ];
 
   const loadingInterval = setInterval(function() {
-    progress += Math.random() * 15 + 5;
+    progress += Math.random() * 12 + 3;
     if (progress >= 100) {
       progress = 100;
       clearInterval(loadingInterval);
@@ -28,16 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
       if (loadingText) loadingText.textContent = 'Welcome to Artoriya Studio';
 
       setTimeout(function() {
-        loadingScreen.classList.add('hidden');
+        if (loadingScreen) loadingScreen.classList.add('hidden');
         initPageFlip();
-      }, 600);
+      }, 700);
     }
 
     if (loadingBar) loadingBar.style.width = progress + '%';
 
-    const msgIndex = Math.min(Math.floor(progress / 25), loadingMessages.length - 1);
+    const msgIndex = Math.min(Math.floor(progress / 20), loadingMessages.length - 1);
     if (loadingText) loadingText.textContent = loadingMessages[msgIndex];
-  }, 200);
+  }, 250);
 
   // Populate dynamic content
   populateCourses();
